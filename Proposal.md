@@ -59,9 +59,11 @@ Functions:
 13. to display correct answer if player choice is wrong
 14. to reset money reward if wrong
 15. to shuffle and display a new set of questions if the game restarts
+
+
 //
 
-// Variables
+Variables
 let questionsBank = [
   { question: "What is the capital of France?", choices: ["Berlin", "Paris", "London", "Madrid"], correctAnswer: 1 },
   // Add more questions as needed
