@@ -24,3 +24,10 @@ Stretch Goals
 
 Timeline - Daily Accountability
 
+| Friday     |   | Design Questions and Answers |   |   |
+|------------|---|------------------------------|---|---|
+| Saturday   |   | work on Design Scaffolding   |   |   |
+| Sunday     |   | Add functionality            |   |   |
+| Monday     |   | Add styling                  |   |   |
+| Tuesday    |   | Finalize MVP                 |   |   |
+| Wedenesday |   | Work on stretch goals        |   |   |
