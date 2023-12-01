@@ -41,18 +41,27 @@ Timeline - Daily Accountability
 
 // Initialize variables
 questionsBank = []   // Array to store all available questions
+
 questionText = ""     // Variable to store the question text
+
 choices = []          // Array to store answer choices
+
 correctAnswer = ""     // Variable to store the correct answer
+
 playerScore = 0       // Variable to store the player's score for each round
+
 totalPoints = 0       // Variable to store the player's cumulative points
+
 timeLimit = 30        // Time limit for each question in seconds
+
 moneyReward = 100     // Initial money reward amount
 
 // Function to select a random set of questions
 function selectRandomQuestions() {
-    // Assume questionsBank is a predefined array of all available questions
-    // Shuffle the questions in questionsBank to create randomness
+
+// Assume questionsBank is a predefined array of all available questions
+    
+// Shuffle the questions in questionsBank to create randomness
     questionsBank = shuffle(questionsBank)
 }
 
@@ -138,4 +147,5 @@ function startGame() {
 }
 
 // Main program
+
 startGame()
