@@ -154,7 +154,7 @@ function displayLosingMessage() {
 function displayCorrectAnswerMessage(message) {
   // Code to display a message with the correct answer
 }
-//
+
 
 
 
