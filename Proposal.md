@@ -1,6 +1,6 @@
 Mind Marvel: Trivia Game 
 
-Project Description: Drawing inspiration from "Who Wants To Be A Millionaire?", Mind Marvel quizs players in a range of topics, spanning from world history to pop culture. Successfully answering each question results in a monetary reward. The challenge questions become more difficult as you as you progress through the game. A time limit will exist, and the game will end if the player provides an incorrect answer. A fresh set of randomly selected questions will appear when the game starts over.
+Project Description: Drawing inspiration from "Who Wants To Be A Millionaire?", Mind Marvel quizs players in a range of topics, spanning from world history to pop culture. Answering each question correctly results in a monetary reward. A time limit will exist, and the game will end if the player provides an incorrect answer. A new set of randomly selected questions will appear when the game starts over.
 
 
 
