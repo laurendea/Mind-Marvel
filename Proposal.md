@@ -27,6 +27,39 @@ Stretch Goals
 3. As a player, I would like to hear a sound and see an animation upon clicking on an answer choice.
 4. As a player, I would like to see a victory or defeat animation and sound.
 
+
+Psuedocode:
+
+Variables
+1. questions bank
+2. questions text
+3. choices array
+4. correct answers 
+5. player score
+6. total points
+7. time limit
+8. money reward
+
+Functions:
+1. to start the game
+2. to select a random set of questions
+3. to display questions and their answer choices
+4. to start time limit with each new question
+5. to end the game if the time limit ends
+6. to check the players answer against the correct answer
+7. to add money value to currect earnings if correct
+8. to display another round of questions if correct
+9. to increase money reward for next question if correct
+10. to repeat the game until the player reaches money goal
+11. to display a winning message
+12. to display a losinf message
+13. to display correct answer if player choice is wrong
+14. to reset money reward if wrong
+15. to ask player if they want to restart the game after losing
+16. to shuffle and display a new set of questions if the game restarts
+
+
+
 | Friday     |   | Write pseudocode, Design questions and answers, Write the logic/Css scaffolding  |   |   |
 |------------|---|----------------------------------------------------------------------------------|---|---|
 | Saturday   |   | Work on the logic and Css                                                        |   |   |
