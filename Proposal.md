@@ -22,9 +22,9 @@ MVP Goals
 
 Stretch Goals
 
-1. As a player, I would like to incorporate animations for both correct and incorrect choices.
+1. As a player, I would like to incorporate color animations for both correct and incorrect choices.
 2. As a player, I would like to have background music while deciding on my answers.
-3. As a player, I would like to hear a sound and see an animation upon clicking on an answer choice.
+3. As a player, I would like to hear a sound upon clicking on an answer choice.
 4. As a player, I would like to see a victory or defeat animation and sound.
 
 
