@@ -35,3 +35,107 @@ Timeline - Daily Accountability
 | Monday     |   | Add styling                  |   |   |
 | Tuesday    |   | Finalize MVP                 |   |   |
 | Wedenesday |   | Work on stretch goals        |   |   |
+
+
+// Mind Marvel Game Pseudocode
+
+// Initialize variables
+questionsBank = []   // Array to store all available questions
+questionText = ""     // Variable to store the question text
+choices = []          // Array to store answer choices
+correctAnswer = ""     // Variable to store the correct answer
+playerScore = 0       // Variable to store the player's score for each round
+totalPoints = 0       // Variable to store the player's cumulative points
+timeLimit = 30        // Time limit for each question in seconds
+moneyReward = 100     // Initial money reward amount
+
+// Function to select a random set of questions
+function selectRandomQuestions() {
+    // Assume questionsBank is a predefined array of all available questions
+    // Shuffle the questions in questionsBank to create randomness
+    questionsBank = shuffle(questionsBank)
+}
+
+// Function to shuffle an array
+function shuffle(array) {
+    // Implementation of a shuffle algorithm 
+}
+
+// Function to display question and answer choices
+function displayQuestionAndChoices() {
+    // Display questionText
+    print(questionText)
+}
+
+// Function to check player's answer
+function checkAnswer(playerChoice) {
+    // Check if playerChoice is equal to correctAnswer
+    if (playerChoice == correctAnswer) {
+        // Player answered correctly
+        playerScore = moneyReward
+        totalPoints = totalPoints + playerScore
+        print("Correct! You earned $" + moneyReward + ".")
+        print("Your score for this round: $" + playerScore)
+        
+  // Increase money reward for the next question
+    moneyReward = moneyReward * 2  // You can adjust the increment as needed
+} else {
+    // Player answered incorrectly
+    playerScore = 0
+    print("Incorrect. The correct answer is: " + correctAnswer)
+    
+   // Reset money reward to the initial amount
+    moneyReward = 100
+
+  // Ask the player if they want to restart the game
+    print("Do you want to restart the game? (yes/no)")
+    // Get player's response (input from user)
+    if (playerResponse is "yes") {
+        // Restart the game
+        resetGame()
+    }
+ }
+}
+
+// Function to reset the game variables
+function resetGame() {
+    totalPoints = 0
+    moneyReward = 100
+}
+
+// Function to play a round of the game
+function playRound() {
+    // Select a new set of questions
+    selectRandomQuestions()
+
+  // Display the question and choices
+    displayQuestionAndChoices()
+
+   // Set a timer for timeLimit seconds
+
+  // Get player's choice (input from user)
+
+  // Check player's answer
+    checkAnswer(playerChoice)
+}
+
+// Function to start the game
+function startGame() {
+    // Set up questionsBank with a list of all available questions
+
+  // Repeat for a certain number of rounds or until the player decides to exit
+    repeat {
+        // Play a round
+        playRound()
+
+   // Display total points earned so far
+        print("Total Points: $" + totalPoints)
+
+  // Ask the player if they want to play another round
+        print("Do you want to play another round? (yes/no)")
+        // Get player's response (input from user)
+    } until (playerResponse is "no")
+}
+
+// Main program
+startGame()
