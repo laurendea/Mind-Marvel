@@ -16,7 +16,7 @@ MVP Goals
 2. As a player, I want my game to display the time limit.
 3. As a player, I want my game to include the question's money value and the player's current earnings.
 4. As a player, I want my game to inform the player whether the answer is correct or incorrect.
-5. As a player, I want my game to give the correct answer if a player responds incorrectly.
+5. As a player, I want my game to give the correct answer if the choice is incorrect.
 6. As a player, I want my game to restart upon losing.
 7. As a player, I want my game to give a victory message once $1,000,000 is earned.
 
