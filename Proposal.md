@@ -17,8 +17,8 @@ MVP Goals
 3. As a player, I want my game to include the question's money value and the player's current earnings.
 4. As a player, I want my game to inform the player whether the answer is correct or incorrect.
 5. As a player, I want my game to give the correct answer if a player responds incorrectly.
-6. As a player, I want my game to restart the game upon losing.
-7. As a player, I want my game to give a victory message once they earn $1,000,000.
+6. As a player, I want my game to restart upon losing.
+7. As a player, I want my game to give a victory message once $1,000,000 is earned.
 
 Stretch Goals
 
@@ -35,10 +35,10 @@ Variables
 2. questions text
 3. choices array
 4. correct answers 
-5. player score
-6. total points
-7. time limit
-8. money reward
+5. player's stored earnings
+6. time limit
+7. money reward for each answer
+8. player's answer choice
 
 Functions:
 1. to start the game
@@ -52,11 +52,10 @@ Functions:
 9. to increase money reward for next question if correct
 10. to repeat the game until the player reaches money goal
 11. to display a winning message
-12. to display a losinf message
+12. to display a losing message
 13. to display correct answer if player choice is wrong
 14. to reset money reward if wrong
-15. to ask player if they want to restart the game after losing
-16. to shuffle and display a new set of questions if the game restarts
+15. to shuffle and display a new set of questions if the game restarts
 
 
 
