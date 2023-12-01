@@ -27,14 +27,12 @@ Stretch Goals
 3. As a player, I would like to hear a sound and see an animation upon clicking on an answer choice.
 4. As a player, I would like to see a victory or defeat animation and sound.
 
-Timeline - Daily Accountability
-
-| Friday     |   | Write Pseudocode, Design Questions and Answers, Design the logic  |   |   |
-|------------|---|-------------------------------------------------------------------|---|---|
-| Saturday   |   | Work on the logic and Css                                         |   |   |
-| Sunday     |   | Work on the logic and Css                                         |   |   |
-| Monday     |   | Work on the logic and Css                                         |   |   |
-| Tuesday    |   | Finalize MVP                                                      |   |   |
-| Wedenesday |   | Work on stretch goals                                             |   |   |
+| Friday     |   | Write pseudocode, Design questions and answers, Write the logic/Css scaffolding  |   |   |
+|------------|---|----------------------------------------------------------------------------------|---|---|
+| Saturday   |   | Work on the logic and Css                                                        |   |   |
+| Sunday     |   | Work on the logic and Css                                                        |   |   |
+| Monday     |   | Work on the logic and Css                                                        |   |   |
+| Tuesday    |   | Finalize MVP                                                                     |   |   |
+| Wedenesday |   | Work on stretch goals                                                            |   |   |                                                           |   |   |
 
 
