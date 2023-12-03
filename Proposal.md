@@ -1,6 +1,6 @@
 Mind Marvel: Trivia Game 
 
-Project Description: Drawing inspiration from "Who Wants To Be A Millionaire?", Mind Marvel quizs players in a range of topics, spanning from world history to pop culture. Answering each question correctly results in a monetary reward. A time limit will exist, and the game will end if the player provides an incorrect answer. A new set of randomly selected questions will appear when the game starts over.
+Project Description: Drawing inspiration from "Who Wants To Be A Millionaire?", Mind Marvel quizs players in a range of topics, spanning from world history to pop culture. Answering each question correctly results in a monetary reward. A time limit will exist, andF the game will end if the player provides an incorrect answer. A new set of randomly selected questions will appear when the game starts over.
 
 
 
@@ -95,6 +95,11 @@ function loadQuestion() {
   let currentQuestion = questionsBank[currentQuestionIndex];
   displayQuestion(currentQuestion);
   startTimer();
+}
+
+// Function to display the current question's worth in money reward
+function displayMoneyReward() {
+  // Code to display the current question's worth in money reward
 }
 
 // 4. To start time limit with each new question
