@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    font-size: 3rem;
+    padding: 3rem;
+    margin-left: -100px;
+}
+
+.topBox {
+    margin-right: 20%;
+    margin-left: 10%;
+}
+
 .imagesContainer {
     position: relative;
 }
@@ -14,9 +27,9 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -164px;
+    margin-top: -166px;
     margin-left: 440px;
-    width: 518px;
+    width: 472px;
     height: 594px;
     position: absolute;
 }
@@ -25,18 +38,6 @@
     position: absolute;
 }
 
-h1 {
-    font-family: 'Cormorant Garamond', serif;
-    text-align: center;
-    font-size: 3rem;
-    padding: 3rem;
-    margin-left: -43px;
-}
-
-.topBox {
-    margin-right: 20%;
-    margin-left: 10%;
-}
 
 .timer {
     color: black;
@@ -71,16 +72,16 @@ h1 {
 }
 
 #questionImage {
-    margin-left: 563px;
-    margin-top: 26px;
+    margin-left: 534px;
+    margin-top: -20px;
     border-radius: 50%;
-    width: 260px;
-    height: 320px;
+    width: 274px;
+    height: 353px;
 }
 
 #questionText {
     width: 52%;
-    height: 55px;
+    height: 50px;
     border: 2px solid black;
     border-radius: 2rem;
     display: flex;
@@ -89,20 +90,23 @@ h1 {
     color: black;
     font-size: .9rem;
     text-align: center;
-    padding: 33px;
-    margin-top: 445px;
+    padding: 27px;
+    margin-top: 388px;
     margin-left: 500px;
+    position: absolute;
+
 }
 
 #choice {
     width: 50%;
-    height: 50%;
     display: inline-flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 3rem;
-    margin-top: -35px;
+    margin-top: 400px;
     margin-left: 360px;
+    position: absolute;
+
 }
 
 .option {
