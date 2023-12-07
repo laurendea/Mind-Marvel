@@ -11,16 +11,23 @@
     <title>Mind Marvel</title>
 </head>
 <body>
-    <main>
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="assets/ocean.mp4" type="video/mp4">
+        </video>
+    <main class="card">
         <div class="topContainer">
+
             <h1>Mind Marvel</h1>
+
             <div class="topBox">
                 <div class="timer" id="timer">00:00</div>
-                <h2 id="moneyRewardLabel">Earnings: $0</h2>
+                <div id="moneyRewardLabel">Earnings: $0</div>
                 <button class="playAgain" onclick="startGame()">Start Game</button>
                 <div id="winningMessage"></div>
                 <div id="losingMessage"></div>
             </div>
+
         </div>
 
         <div class="imagesContainer">

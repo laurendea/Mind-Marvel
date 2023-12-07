@@ -4,17 +4,53 @@
     box-sizing: border-box;
 }
 
-h1 {
+body {
+    margin: 0;
+    padding: 0;
     font-family: 'Cormorant Garamond', serif;
+}
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.card {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: none;
+    position: relative;
+    border-radius: 20px;
+}   
+
+h1 {
     text-align: center;
     font-size: 3rem;
-    padding: 3rem;
-    margin-left: -100px;
+    padding: 1rem 0;
+    position: absolute;
+    top: 5%; /* Position at 50% from the top */
+    left: 50%; /* Position at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the element with respect to its own dimensions */
+    z-index: 1; /* Ensure the h1 is above the background */
 }
 
 .topBox {
-    margin-right: 20%;
-    margin-left: 10%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Ensure the topBox is above the h1 and background */
 }
 
 .imagesContainer {
@@ -22,17 +58,16 @@ h1 {
 }
 
 .resizeBackground {
-    background-image: url("https://lh3.googleusercontent.com/pw/ADCreHd6NsNW2vV55rPpQAYQf8qsjVKNPMYQwqmMDMlDujiaxIUQIZe0Pvt-TgNy_sNhw9gk9pn6WoDxjMuls3smXg_WwLAibZyD4CBVMtfeUXRZUw23pAQ=w2400");
+    background-image: url("assets/backgroundmirror copy (1).png");
     background-size: cover;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -166px;
-    margin-left: 440px;
     width: 472px;
-    height: 594px;
+    height: 539px;
     position: absolute;
+    top: -86px; /* Adjust the top distance */
+    left: 50px; /* Adjust the left distance */
 }
+
 
 .questionsImages {
     position: absolute;
@@ -45,7 +80,8 @@ h1 {
     font-family: 'Cormorant Garamond', serif;
     font-family: 'Poiret One', sans-serif;
     font-size: 1rem;
-    margin-right: 60px;
+    margin-right: -235px;
+    margin-top: 20px;
 }
 
 #moneyRewardLabel {
@@ -55,55 +91,63 @@ h1 {
     font-family: 'Cormorant Garamond', serif;
     font-family: 'Poiret One', sans-serif;
     font-size: 1.2rem;
-    margin-left: 120px;
+    margin-left: -177px;
 }
 
 .playAgain {
-    margin-left: 865px;
-    margin-top: 1%;
+    margin-left: 156%; */
+    margin-top: -4rem; */
+    margin-bottom: 16px;
     font-family: 'Cormorant Garamond', serif;
     font-family: 'Poiret One', sans-serif;
-    width: 110px;
-    height: 55px;
-    border: 3px solid green;
+    width: 63px;
+    height: 89px;
+    border: 4px solid;
+    border-color: lightgrey;
     border-radius: 50%;
     background-color: black;
     color: white;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
 }
 
+
+
 #questionImage {
-    margin-left: 534px;
-    margin-top: -20px;
+    margin-left: 147px;
+    margin-top: 61px;
     border-radius: 50%;
-    width: 274px;
-    height: 353px;
+    width: 267px;
+    height: 345px;
 }
 
 #questionText {
-    width: 52%;
-    height: 50px;
+    width: 82%;
+    height: 60px;
     border: 2px solid black;
     border-radius: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white;
+    background-color: black; 
     font-size: .9rem;
     text-align: center;
-    padding: 27px;
-    margin-top: 388px;
+    padding: 23px;
+    margin-top: 467px;
     margin-left: 500px;
     position: absolute;
-
 }
 
+
 #choice {
-    width: 50%;
+    width: 80%;
     display: inline-flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 3rem;
-    margin-top: 400px;
+    padding: 1rem;
+    margin-top: 517px;
     margin-left: 360px;
     position: absolute;
 
@@ -117,19 +161,24 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white; /* Set text color to white */
     font-size: .7rem;
     margin: 3px;
     transition: background-color 0.3s ease;
+    background-color: black; /* Set background color to black */
 }
 
 .option.correct {
-    background-color: green; 
+    background-color: green !important;
+    color: white !important;
 }
+
 
 .option.incorrect {
     background-color: red; 
+    color: white; /* Set text color to white for incorrect answer */
 }
+
 
 #winningMessage {
     display: none;
@@ -137,14 +186,17 @@ h1 {
     font-weight: bold;
     color: green;
     margin-top: 20px;
+    margin-left: -215px;
 }
 
 #losingMessage {
     display: none;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     color: red;
-    margin-top: 8px;
+    margin-top: 31px;
+    margin-left: -205px;
+    position: absolute;
 }
 
 @media screen and (min-width: 768px) {
@@ -154,13 +206,13 @@ h1 {
     }
 
     #questionText {
-        width: 52%;
-        margin-left: 330px;
+        width: 82%;
+        margin-left: 33px;
     }
 
     #choice {
-        width: 50%;
-        margin-left: 333px;
+        width: 80%;
+        margin-left: 33px;
     }
 
     .option {
@@ -183,7 +235,7 @@ h1 {
     }
 
     #choice {
-        width: 80%;
+        width: 89%;
         margin-left: auto;
         margin-right: auto;
     }

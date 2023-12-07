@@ -105,7 +105,7 @@ const triviaQuestions = [
         question: "In Egyptian mythology, what is the name of the snake that encircles the sun god Ra's boat?",
         answers: ["Apophis", "Ammit", "Wadjet", "Ma'at"],
         correctAnswer: 0,
-        imgSrc: 'assets/assets/adophis.jpg'
+        imgSrc: '/assets/adophis.jpg'
     },
     {
         question: "Which Egyptian god is often depicted with the head of an ibis and associated with wisdom and writing?",
@@ -187,6 +187,28 @@ const triviaQuestions = [
     },
 ];
 
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('.playAgain');
+    button.addEventListener('click', handleButtonClick);
+    startGame(); // Start the game when the page loads
+    updateButtonText();
+});
+
+function handleButtonClick() {
+    if (!gameStarted) {
+        startGame();
+    } else {
+        resetGame();
+    }
+    updateButtonText();
+}
+
+function updateButtonText() {
+    const button = document.querySelector('.playAgain');
+    button.textContent = gameStarted ? 'Reset Game' : 'Start Game';
+}
+
+
 let currentQuestionIndex;
 let playerEarnings = 0;
 let totalQuestions = 25;
@@ -215,15 +237,8 @@ function startGame() {
 
     // Update game state and button text
     gameStarted = true;
-    updateButtonText();
-
-    // Add the event listener for the button click
-    const button = document.querySelector('.playAgain');
-    button.removeEventListener('click', startGame); // Remove previous event listener
-    button.addEventListener('click', resetGame); // Add new event listener for resetGame
+    updateButtonText("Reset Game");
 }
-
-
 
 function resetGame() {
     currentQuestionIndex = 0;
@@ -235,10 +250,9 @@ function resetGame() {
     document.getElementById('losingMessage').style.display = 'none';
 
     gameStarted = false;
-    updateButtonText();
-
-    startGame();
+    updateButtonText("Start Game");
 }
+
 
 
 function loadQuestion() {
@@ -335,7 +349,7 @@ let correctAnswerCounter = 0;
 
 function displayWinningMessage() {
     const winningMessageElement = document.getElementById('winningMessage');
-    winningMessageElement.textContent = "Congratulations! You've earned $1,000,000!";
+    winningMessageElement.textContent = "Congratulations! You've won!";
     winningMessageElement.style.display = 'block';
     correctAnswerCounter = 0;
 
@@ -357,7 +371,7 @@ function checkAnswer(selectedOption) {
     let options = document.querySelectorAll('.option');
 
     options.forEach((option, index) => {
-        option.onclick = null;
+        option.onclick = null; // Remove click event for all options
 
         if (index === currentQuestion.correctAnswer) {
             option.classList.add('correct');
@@ -366,25 +380,33 @@ function checkAnswer(selectedOption) {
         }
     });
 
-    if (selectedOption === currentQuestion.correctAnswer) {
-        correctAnswerCounter++;
-        playerEarnings += earningsPerQuestion;
-        document.getElementById('moneyRewardLabel').textContent = `Earnings: $${playerEarnings}`;
+    setTimeout(() => {
+        options.forEach((option, index) => {
+            option.classList.remove('correct', 'incorrect'); // Remove classes after a delay
+        });
 
-        if (correctAnswerCounter === 25) {
-            displayWinningMessage();
-            resetGame();
+        if (selectedOption === currentQuestion.correctAnswer) {
+            correctAnswerCounter++;
+            playerEarnings += earningsPerQuestion;
+            document.getElementById('moneyRewardLabel').textContent = `Earnings: $${playerEarnings}`;
+
+            if (correctAnswerCounter === 25) {
+                displayWinningMessage();
+                resetGame();
+            } else {
+                nextQuestion();
+            }
         } else {
-            nextQuestion();
-        }
-    } else {
-        displayLosingMessage();
+            displayLosingMessage();
 
-        setTimeout(() => {
-            resetGame();
-        }, 5000); 
-    }
+            setTimeout(() => {
+                resetGame();
+            }, 5000);
+        }
+    }, 1000); // Adjust the delay as needed
 }
+
+
 
 
 function nextQuestion() {
