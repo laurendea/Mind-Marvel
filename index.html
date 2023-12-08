@@ -1,3 +1,83 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e77a5473fe199ead3b157332d42f2ede8bdface44700160dcd6fa4a81073712
-size 1795
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- <iframe src="https://player.vimeo.com/video/299108946" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
+
+    <title>Mind Marvel</title>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="large_files/ocean.mp4" type="video/mp4">
+        </video>
+    <main class="card">
+        <div class="topContainer">
+
+            <h1>Mind Marvel</h1>
+
+            <div class="topBox">
+                <div class="timer" id="timer">00:00</div>
+                <div id="moneyRewardLabel">Earnings: $0</div>
+                <button class="playAgain" onclick="startGame()">Start Game</button>
+                <div id="winningMessage"></div>
+                <div id="losingMessage"></div>
+            </div>
+
+        </div>
+
+        <div class="imagesContainer">
+            <div class="resizeBackground">
+            </div>
+            <div id="startVideo">
+                <video id="myIntroVideo" autoplay muted loop>
+                    <source src="large_files/drop.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="questionsImages">
+                <img src="" alt="Question Image" id="questionImage">
+            </div>
+        </div>
+
+        <div id="questionText"></div>
+        <div id="choice">
+        </div>
+
+    </main>
+    <div id="video-background"></div>
+
+    <!-- Include the Vimeo player script -->
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <script defer src="index.js"></script>
+    <!-- <script>
+        // Replace 'your-vimeo-video-id' with the actual Vimeo video ID
+        var videoID = '299108946';
+    
+        var options = {
+            id: videoID,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            loop: true,
+            autoplay: true,
+        };
+    
+        // Create a Vimeo player
+        var player = new Vimeo.Player('video-background', options);
+    
+        // Resize the video when the window is resized
+        window.addEventListener('resize', function() {
+            player.resize(window.innerWidth, window.innerHeight);
+        });
+    </script> -->
+    
+</body>
+</html>
+
