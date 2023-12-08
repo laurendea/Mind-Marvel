@@ -1,3 +1,271 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f13957c0d0e219fadc7977d2d2745a7c8ff0a6bb0a8fa09f83c908498ba5c93d
-size 4527
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.card {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: none;
+    position: relative;
+    border-radius: 20px;
+}   
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem 0;
+    position: absolute;
+    top: 5%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+}
+
+.topBox {
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; 
+}
+
+.imagesContainer {
+    position: relative;
+}
+
+.resizeBackground {
+    background-image: url("assets/backgroundmirror copy (1).png");
+    background-size: cover;
+    display: block;
+    width: 472px;
+    height: 539px;
+    position: absolute;
+    top: -86px; 
+    left: 50px; 
+}
+
+#startVideo {
+    display: block;
+    position: absolute;
+    width: 270px; 
+    height: 342px; 
+    border-radius: 50%; 
+    overflow: hidden;
+    margin-top: 62px; 
+    left: 26%; 
+}
+
+#myIntroVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.questionsImages {
+    position: absolute;
+}
+
+.questionsImages, #choice {
+    display: none;
+}
+
+
+.timer {
+    color: black;
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 1rem;
+    margin-right: -235px;
+    margin-top: 20px;
+}
+
+#moneyRewardLabel {
+    border: none;
+    margin: 0;
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 1.2rem;
+    margin-left: -177px;
+}
+
+.playAgain {
+    margin-left: 156%; 
+    margin-top: -4rem; 
+    margin-bottom: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poiret One', sans-serif;
+    width: 63px;
+    height: 89px;
+    border: 4px solid;
+    border-color: lightgrey;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+#questionImage {
+    margin-left: 146px;
+    margin-top: 61px;
+    border-radius: 50%;
+    width: 269px;
+    height: 345px;
+}
+
+#questionText {
+    width: 82%;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black; 
+    font-size: .9rem;
+    text-align: center;
+    padding: 13px;
+    margin-top: 467px;
+    margin-left: 500px;
+    position: absolute;
+}
+
+
+#choice {
+    width: 80%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-top: 517px;
+    margin-left: 360px;
+    position: absolute;
+}
+
+.option {
+    width: 41%;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 2rem;
+    display: inline-block; 
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    text-align: center;
+    font-size: .8rem;
+    margin: 3px;
+    transition: background-color 0.3s ease;
+    background-color: black; 
+    padding: 2px;
+}
+
+.option.correct {
+    background-color: green !important;
+    color: white !important;
+}
+
+
+.option.incorrect {
+    background-color: red; 
+    color: white; 
+}
+
+
+#winningMessage {
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    margin-top: 20px;
+    margin-left: -215px;
+    position: absolute;
+}
+
+#losingMessage {
+    display: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: crimson;
+    margin-top: 31px;
+    margin-left: -205px;
+    position: absolute;
+}
+
+
+@media screen and (min-width: 768px) {
+    .topBox {
+        margin-right: 20%;
+        margin-left: 10%;
+    }
+
+    #questionText {
+        width: 82%;
+        margin-left: 33px;
+        display: none;
+    }
+
+    #choice {
+        width: 80%;
+        margin-left: 77px;
+    }
+
+    .option {
+        width: 40%;
+        margin: 3px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .topBox {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #questionText {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #choice {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .option {
+        width: 100%;
+        margin: 3px;
+    }
+}
+
